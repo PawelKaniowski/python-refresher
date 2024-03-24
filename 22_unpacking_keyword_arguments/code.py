@@ -3,11 +3,11 @@ def named(**kwargs):
     print(kwargs)
 
 
-named(name="Bob", age=25)
+named(name="Bob", age=25, occu='killer')
 # named({"name": "Bob", "age": 25})  # Error, the dictionary is actually a positional argument.
 
 # Unpack dict into arguments. This is OK, but slightly more confusing. Good when working with variables though.
-named(**{"name": "Bob", "age": 25})
+named(**{"name": "Bob", "age": 29})
 
 
 # -- Unpacking and repacking --
@@ -21,7 +21,7 @@ def print_nicely(**kwargs):
         print(f"{arg}: {value}")
 
 
-print_nicely(name="Bob", age=25)
+print_nicely(name="Bob", age=20)
 
 
 # -- Both args and kwargs --
@@ -32,7 +32,7 @@ def both(*args, **kwargs):
     print(kwargs)
 
 
-both(1, 3, 5, name="Bob", age=25)
+both(1, 3, 5, name="Bob", age=25, occu='killer')
 
 # This is normally used to accept an unlimited number of arguments and keyword arguments, such that some of them can be passed onto other functions.
 # You'll frequently see things like these in Python code:
@@ -51,5 +51,9 @@ def myfunction(**kwargs):
     print(kwargs)
 
 
-myfunction(**"Bob")  # Error, must be mapping
-myfunction(**None)  # Error
+myfunction(**{'bob':22, 'alice' : 44})  # Error, must be mapping
+# myfunction(**None)  # Error
+
+details = {"name": "Pawel", "age": 44, "occupation": "programmer"}
+myfunction(**details)
+print(details)

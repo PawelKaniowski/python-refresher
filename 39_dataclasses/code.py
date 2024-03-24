@@ -12,7 +12,8 @@ class Student:
 
 bob = Student("Bob")
 bob.take_exam(90)
-print(bob)
+bob.take_exam(100)
+print(bob.grades)
 
 # -- as dataclass --
 

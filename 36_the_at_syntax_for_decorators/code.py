@@ -15,8 +15,10 @@ def make_secure(func):
 def get_admin_password():
     return "1234"
 
+print(get_admin_password.__name__)
 
 # -- keeping function name and docstring --
+
 import functools
 
 
@@ -37,3 +39,6 @@ def make_secure(func):
 @make_secure
 def get_admin_password():
     return "1234"
+
+
+print(get_admin_password())

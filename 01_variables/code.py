@@ -2,6 +2,7 @@
 
 x = 15
 price = 9.99
+print(id(price))
 
 discount = 0.2
 
@@ -20,13 +21,13 @@ print(name * 2)
 # -- Changing variables --
 # Variables are names for values.
 
-a = 25
+a = {'sss'}
 b = a
 
 # Here we've given the value '25' the names 'a' and 'b'.
 
-print(a)
-print(b)
+print(id(a))
+print(id(b))
 
 b = 17
 

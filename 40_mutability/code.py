@@ -64,5 +64,5 @@ a += "world"
 # But it doesn't, because strings are immutable. When you do str + str, a _new_ string is created.
 # This means that a becomes a new string containing "helloworld", but b still is a name for "hello".
 
-print(id(a))
-print(id(b))
+print(id(a), a)
+print(id(b), b)

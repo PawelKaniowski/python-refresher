@@ -40,4 +40,4 @@ print(printer)
 printer.print(50)
 print(printer)
 printer.disconnect()
-printer.print(30)  # Error
+# printer.print(30)  # Error

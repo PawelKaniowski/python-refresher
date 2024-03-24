@@ -50,3 +50,9 @@ python101.read(35)
 python101.read(
     50
 )  # This now raises an error, which has a helpful name and a helpful error message.
+
+try:
+    python101.read(35)
+    python101.read(50)
+except TooManyPagesReadError as e:
+    print(e)

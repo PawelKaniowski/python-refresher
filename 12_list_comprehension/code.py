@@ -2,7 +2,7 @@ numbers = [1, 3, 5]
 squares = [x * 2 for x in numbers]
 
 # -- Dealing with strings --
-
+print(squares)
 friends = ["Rolf", "Sam", "Samantha", "Saurabh", "Jen"]
 starts_s = []
 
@@ -29,3 +29,4 @@ print(friends)
 print(starts_s)
 print(friends is starts_s)
 print("friends: ", id(friends), " starts_s: ", id(starts_s))
+

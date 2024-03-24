@@ -1,0 +1,16 @@
+import requests
+
+a = requests.get("https://httpbin.org/get")
+print(a.json())
+b = requests.post("https://httpbin.org/post", data={"model": "volvo"})
+print(b.json())
+c = requests.put("https://httpbin.org/put", data={"student": "Tomasz"})
+print(c.json())
+d = requests.delete("https://httpbin.org/delete")
+print(d.text)
+e = requests.head("https://httpbin.org/get")
+print(e.text)
+f = requests.patch("https://httpbin.org/patch", data={"system": "linux"})
+print(f.text)
+g = requests.options("https://httpbin.org/get")
+print(g.text)
