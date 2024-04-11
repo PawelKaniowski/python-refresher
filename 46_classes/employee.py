@@ -40,3 +40,12 @@ class Employee:
             f"""name="{self.name}", """
             f"""birth_date="{self.birth_date.strftime('%Y-%m-%d')}")"""
         )
+Pawel = Employee('Pawel', '1979-05-22')
+
+print(Pawel.compute_age())
+print((Pawel.compute_age()))
+
+employee = {'name': 'Anna', 'birth_date': '1965-09-14'}
+
+new_employe = Employee.from_dict(employee)
+print(new_employe.name)

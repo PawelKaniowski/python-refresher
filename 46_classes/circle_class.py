@@ -2,6 +2,10 @@ import math
 class Circle:
      def __init__(self, radius):
          self.radius = radius
+     def __str__(self):
+         return f'Circle class with radius of {self.radius}'
+
+
      def area(self):
          return math.pi * pow(self.radius, 2)
 
@@ -17,4 +21,5 @@ large.area()
 
 large.radius = 85
 print(large.area())
+print(small)
 
